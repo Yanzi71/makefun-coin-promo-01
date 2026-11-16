@@ -1,5 +1,9 @@
 # Bounty Bot ($BOUNTY) — makefun-coin-promo-01
 
+[![make.fun · makefun-coin-promo-01](https://make.fun/badge/makefun-coin-promo-01.svg)](https://make.fun/bounty/makefun-coin-promo-01?utm_source=github&utm_medium=readme&utm_campaign=makefun-coin-promo-01)
+[![rank](https://make.fun/badge/makefun-coin-promo-01/Yanzi71/makefun-coin-promo-01/rank.svg)](https://make.fun/bounty/makefun-coin-promo-01/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=makefun-coin-promo-01)
+[![reward](https://make.fun/badge/makefun-coin-promo-01/Yanzi71/makefun-coin-promo-01/reward.svg)](https://make.fun/bounty/makefun-coin-promo-01?utm_source=github&utm_medium=readme&utm_campaign=makefun-coin-promo-01)
+
 An entry for make.fun's bounty "Launch a coin that sells make.fun": a real coin
 on pump.fun that promotes make.fun to pump.fun's traders. An AI judge compares
 the coins two at a time, and the top 50 share $1,000.
@@ -24,8 +28,9 @@ judged; the coin stays ours.
 
 - `LAUNCH.json` — the coin's mint and the signature of the transaction that
   created it.
-- `main.ts` — copies `LAUNCH.json` to `/output/LAUNCH.json`. That is all the
-  program has to do; the house reads the coin itself from pump.fun.
+- `main.ts` — validates `LAUNCH.json` (44-character base58 `mint`, non-empty
+  base58 `create_signature`) and copies it to `/output/LAUNCH.json`. That is
+  all the program has to do; the house reads the coin itself from pump.fun.
 - `logo.webp` — the coin's logo, as uploaded in its metadata.
 
 Run it locally:
